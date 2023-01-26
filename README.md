@@ -2,6 +2,7 @@
 
 Hello everybody. I analyzed 50+ stocks from a dataset containing over 230,000+ rows and consolidated insights into a report.     
 The dashboard is hosted at novypro and access it at here : https://www.novypro.com/project/-s  
+View profiling report at https://abishek-ks.github.io/Niftystocks/  
 SNAPSHOTS OF DASHBOARD:     
 ![cover](https://user-images.githubusercontent.com/97246536/214818757-334da07b-3d42-43bc-aaaa-51dc70bb5e2d.png)
 
