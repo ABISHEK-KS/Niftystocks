@@ -68,7 +68,7 @@ def show_home():
 
     st.info(' ')
     st.markdown("<h1 style='text-align: center; color: white;'>Skewness Table</h1>", unsafe_allow_html=True)
-    st.table(filed.skew())
+    st.table(filed.select_dtypes(include=[float, int]).skew())
 
 # Power-BI 
 def show_pbi():
