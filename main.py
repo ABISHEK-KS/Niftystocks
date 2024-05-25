@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import time
 import streamlit.components.v1 as components
-from pptx import Presentation
-from PIL import Image
+
 import os
 
 # Load CSS 
