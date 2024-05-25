@@ -61,11 +61,11 @@ def show_home():
 
     st.info(' ')
     st.markdown("<h1 style='text-align: center; color: white;'>Correlation Matrix</h1>", unsafe_allow_html=True)
-    st.table(filed.corr())
+    st.table(filed.select_dtypes(include=[pd.np.number]).corr())
 
     st.info(' ')
     st.markdown("<h1 style='text-align: center; color: white;'>Skewness Table</h1>", unsafe_allow_html=True)
-    st.table(pd.DataFrame(filed.skew()))
+    st.table(filed.select_dtypes(include=[pd.np.number]).skew())
 
 # Power-BI 
 def show_pbi():
