@@ -14,6 +14,7 @@ local_css("externalcss.css")
 
 # Read file
 filed = pd.read_csv('Combined.csv')
+filed['Date'] = pd.to_datetime(filed['Date'], format='%d-%m-%Y', errors='coerce')
 
 # buttons
 home = st.sidebar.button('Home')
