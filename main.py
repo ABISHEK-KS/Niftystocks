@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import time
 import streamlit.components.v1 as components
+import numpy as np
 
 # Load CSS 
 def local_css(file_name):
