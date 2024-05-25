@@ -3,3 +3,4 @@ pandas
 os
 time
 streamlit.components.v1
+numpy
