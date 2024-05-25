@@ -3,8 +3,6 @@ import pandas as pd
 import time
 import streamlit.components.v1 as components
 
-import os
-
 # Load CSS 
 def local_css(file_name):
     with open(file_name) as f:
@@ -12,25 +10,24 @@ def local_css(file_name):
 
 local_css("externalcss.css")
 
-# Read file
+# Read file and convert date column to datetime
 filed = pd.read_csv('Combined.csv')
 filed['Date'] = pd.to_datetime(filed['Date'], format='%d-%m-%Y', errors='coerce')
 
-# buttons
+# Buttons
 home = st.sidebar.button('Home')
 pbi = st.sidebar.button('Power-Bi Dashboard')
 Docs = st.sidebar.button('Docs')
 Prof = st.sidebar.button('YDTP Report')
 
-
-# Function 
+# Function to split list into chunks
 def split_into_chunks(lst, chunk_size):
-    return [lst[i:i + chunk_size] for i in range(0, len(lst), chunk_size)]
+    return [lst[i[i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
-# Set default
+# Set default page
 default_page = "Home"
 
-# Determine
+# Determine selected page
 if home:
     selected_page = "Home"
 elif pbi:
@@ -39,7 +36,6 @@ elif Docs:
     selected_page = "Docs"
 elif Prof:
     selected_page = "YDTP Report"
-
 else:
     selected_page = default_page
 
@@ -69,7 +65,7 @@ def show_home():
 
     st.info(' ')
     st.markdown("<h1 style='text-align: center; color: white;'>Skewness Table</h1>", unsafe_allow_html=True)
-    st.table(filed.select_dtypes(include=[float, int]).skew())
+    st.table(filed.skew())
 
 # Power-BI 
 def show_pbi():
@@ -129,4 +125,4 @@ elif selected_page == "Power-Bi Dashboard":
 elif selected_page == "Docs":
     show_docs()
 elif selected_page == "YDTP Report":
-    show_ydtp_report()
+    show_ydtp_report() 
