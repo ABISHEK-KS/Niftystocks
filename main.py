@@ -22,7 +22,7 @@ Prof = st.sidebar.button('YDTP Report')
 
 # Function to split list into chunks
 def split_into_chunks(lst, chunk_size):
-    return [lst[i[i + chunk_size] for i in range(0, len(lst), chunk_size)]]
+    return [lst[i:i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
 # Set default page
 default_page = "Home"
@@ -125,4 +125,5 @@ elif selected_page == "Power-Bi Dashboard":
 elif selected_page == "Docs":
     show_docs()
 elif selected_page == "YDTP Report":
-    show_ydtp_report() 
+    show_ydtp_report()
+
