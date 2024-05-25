@@ -22,7 +22,7 @@ Prof = st.sidebar.button('YDTP Report')
 
 # Function to split list into chunks
 def split_into_chunks(lst, chunk_size):
-    return [lst[i[i + chunk_size] for i in range(0, len(lst), chunk_size)]
+    return [lst[i[i + chunk_size] for i in range(0, len(lst), chunk_size)]]
 
 # Set default page
 default_page = "Home"
