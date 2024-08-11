@@ -1,4 +1,5 @@
 # Niftystocks
+https://niftystocks-abishekks.streamlit.app/  
 
 Hello everybody. I analyzed 50+ stocks from a dataset containing over 230,000+ rows and consolidated insights into a report.     
 The dashboard is hosted at novypro and access it at here : https://www.novypro.com/project/-s  
